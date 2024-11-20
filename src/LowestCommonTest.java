@@ -17,4 +17,14 @@ public class LowestCommonTest {
     public void testLowestCommon3() {
         assertEquals(4, LowestCommon.lowestCommon(21, 18));
     }
+
+    @org.junit.Test
+    public void testLowestCommonInvalid() {
+        try {
+            LowestCommon.lowestCommon(-1, 2);
+            fail("Expected IllegalArgumentException");
+        } catch (IllegalArgumentException e) {
+            // pass
+        }
+    }
 }

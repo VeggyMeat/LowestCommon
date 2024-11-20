@@ -7,13 +7,17 @@ public class LowestCommon {
         int c = 0;
         while (x > 0 && y > 0) {
             if (x % 2 == 1 && y % 2 == 1) {
-                return c;
+                break;
             }
             c += 1;
             x /= 2;
             y /= 2;
         }
 
-        return -1;
+        if (x == 0 || y == 0) {
+            c = -1;
+        }
+
+        return c;
     }
 }
